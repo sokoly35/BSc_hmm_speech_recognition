@@ -1,6 +1,5 @@
 # Speech Recgonition using Hidden Markov Models with noise
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/sokoly35/BSc_hmm_speech_recognition)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sokoly35/BSc_hmm_speech_recognition)
 ![GitHub issues](https://img.shields.io/github/issues-raw/sokoly35/BSc_hmm_speech_recognition)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/sokoly35/BSc_hmm_speech_recognition)
