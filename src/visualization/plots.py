@@ -1,12 +1,13 @@
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-from typing import List
+from typing import List, Optional, Tuple
 
 
 def make_pointplot(df: pd.DataFrame, x: str, hue: str,
                    ylabels: List[str], titles: List[str], scores: List[str],
-                   legend_title: str, title_x: str, xlabel: str):
+                   legend_title: str, title_x: str, xlabel: str,
+                   grid: Optional[Tuple[int]]=(4, 1), figsize: Optional[Tuple[int]]=(10, 15)):
     """
     function make an column of multiple pointplots divided by x and hue.
 
@@ -21,13 +22,15 @@ def make_pointplot(df: pd.DataFrame, x: str, hue: str,
     legend_title (str): title of legend, connected with hue
     title_x (str): Title template for plots
     xlabel (str): xlabel, connected with x
+    grid (optional, tuple): shape of plot grid
+    figsize (optional, typle): figsize of plot
 
     Returns
     -------
         fig (plt.figure): matplotlib object with figure
     """
     # Define figures and axes
-    fig, ax = plt.subplots(4, 1, figsize=(10, 15))
+    fig, ax = plt.subplots(*grid, figsize=figsize)
     ax = ax.flatten()
 
     # Plot for each metric
